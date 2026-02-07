@@ -52,6 +52,7 @@ header {
    font-size: 13px;
    padding:  4px 0;
    color: var(--oscurocla--color);
+    min-height: 70px;
 }
 
 .header__open-nav-button { 
@@ -1051,6 +1052,7 @@ footer {
 }
 
 /* FIN SLIDER*/
+
 
 
 
