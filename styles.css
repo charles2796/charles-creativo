@@ -52,7 +52,6 @@ header {
    font-size: 13px;
    padding:  4px 0;
    color: var(--oscurocla--color);
-    min-height: 70px;
 }
 
 .header__open-nav-button { 
@@ -75,7 +74,6 @@ header {
    height: auto;
    z-index: 10;
    background-color: var(--blanco-color);
-   opacity: 0.5;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -281,7 +279,7 @@ p{
    .profile__wrapper {
       flex-direction: row;
       padding: 20px;
-      height: 90vh;
+      min-height: 90vh;
       margin: auto;
    }
 
@@ -776,7 +774,7 @@ input[type="radio"] {
 }
 
 /* Animación a cada sección */
-.profile, .portfolio, .form, .estudios, .contenido_adicional {
+.portfolio, .form, .estudios, .contenido_adicional {
    animation: aparecer both;
    animation-timeline: view();
    animation-range: cover 20% contain 40%;
@@ -1052,10 +1050,3 @@ footer {
 }
 
 /* FIN SLIDER*/
-
-
-
-
-
-
-
