@@ -1,20 +1,72 @@
-function ShowHide(){
+﻿function ShowHide(){
   const container_1 = document.getElementsByClassName("container_1")[0];
   container_1.style.visibility =
-    container_1.style.visibility === "hidden" ? "visible" : "hidden";
+    (container_1.style.visibility === "hidden" || container_1.style.visibility === "") ? "visible" : "hidden";
 }
 
 function ShowHide_2(){
   const container_2 = document.getElementsByClassName("container_2")[0];
   container_2.style.visibility =
-    container_2.style.visibility === "hidden" ? "visible" : "hidden";
+    (container_2.style.visibility === "hidden" || container_2.style.visibility === "") ? "visible" : "hidden";
 }
 
+document.documentElement.classList.add('js');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const pageLoader = document.getElementById('page-loader');
+  if (!pageLoader) return;
+
+  const navigationEntry = performance.getEntriesByType('navigation')[0];
+  const isReload = navigationEntry?.type === 'reload';
+  let isFromSameSite = false;
+
+  if (document.referrer) {
+    try {
+      isFromSameSite = new URL(document.referrer).origin === window.location.origin;
+    } catch (_) {
+      isFromSameSite = false;
+    }
+  }
+
+  const shouldShowLoader = isReload || !isFromSameSite;
+  if (!shouldShowLoader) {
+    pageLoader.classList.add('is-hidden');
+    document.body.classList.remove('loading-screen');
+    return;
+  }
+
+  pageLoader.classList.remove('is-hidden');
+  document.body.classList.add('loading-screen');
+
+  setTimeout(() => {
+    pageLoader.classList.add('is-hidden');
+    document.body.classList.remove('loading-screen');
+  }, 3000);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const footers = document.querySelectorAll('footer');
+  if (!footers.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle('is-visible', entry.isIntersecting);
+    });
+  }, { threshold: 0.2 });
+
+  footers.forEach((footer) => observer.observe(footer));
+});
+
+
 /* ===== SLIDER NUEVO ===== */
+
+document.addEventListener('DOMContentLoaded', () => {
 
 const slides = document.querySelectorAll('.hero-slide');
 const slider = document.getElementById('slider');
 const dotsContainer = document.querySelector('.dots');
+
+if (!slider) return; // Evita errores si el slider no existe en la pÃ¡gina actual
 
 let index = 0;
 let interval;
@@ -52,7 +104,7 @@ function prev() {
   goTo((index - 1 + slides.length) % slides.length);
 }
 
-// Flechas (🔥 FIX CLAVE)
+// Flechas (ðŸ”¥ FIX CLAVE)
 document.querySelector('.next').addEventListener('click', (e) => {
   e.stopPropagation();
   next();
@@ -84,8 +136,8 @@ function resetAuto() {
 
 startAuto();
 
+});
+
 /* ===== SLIDER NUEVO FIN ===== */
-
-
 
 
