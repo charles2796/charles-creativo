@@ -57,7 +57,7 @@ body.loading-screen {
 
 .page-loader__text {
    margin: 0 0 14px;
-   color: #D95F26;
+   color: #f27c38;
    font-family: Consolas, "Lucida Console", "Courier New", monospace;
    font-weight: 700;
    letter-spacing: 1.7px;
@@ -81,9 +81,9 @@ body.loading-screen {
    height: 100%;
    width: 0;
    border-radius: 0;
-   background: #D95F26;
+   background: #f27c38;
    box-shadow: none;
-   animation: loader-progress 3s steps(18, end) forwards;
+   animation: loader-progress 1s steps(18, end) forwards;
 }
 
 @keyframes loader-progress {
@@ -127,6 +127,7 @@ header {
    position: absolute;
    right: 8px;
    color: var(--naranja--color);
+   z-index: 60;
 }
 
 .header__checkbox { 
@@ -134,22 +135,30 @@ header {
 }
 
 .header__nav { 
-   display: none;
-   position: absolute;
-   top: 100%;
-   left: 0;
-   width: 85%;
-   height: auto;
-   z-index: 10;
-   background-color: var(--naranja--color);
+   display: flex;
+   position: fixed;
+   inset: 0;
+   width: 100vw;
+   height: 100dvh;
+   z-index: 50;
+   background-color: rgba(13, 13, 13, 0.97);
+   justify-content: center;
+   align-items: center;
+   transform: translateX(100%);
+   transform-origin: right top;
+   opacity: 0;
+   pointer-events: none;
+   transition: transform .35s ease, opacity .35s ease;
 }
 
 .header__nav-list { 
    display: flex;
    flex-direction: column;
-   height: 30vh;
-   margin: auto;
+   height: auto;
+   margin: 0;
    justify-content: space-evenly;
+   align-items: center;
+   gap: 24px;
 }
 
    .header__nav-list:hover {
@@ -157,7 +166,9 @@ header {
    }
 
 .header__checkbox:checked ~ .header__nav {
-   display: flex;
+   transform: translateX(0);
+   opacity: 1;
+   pointer-events: auto;
 }
 
 .header__logo { 
@@ -171,9 +182,9 @@ header {
 }
 
 .header__nav-item a {
-   padding: 6px 0;
-   font-size: 14px;
-   color: #0D0D0D;
+   padding: 8px 0;
+   font-size: 1.2rem;
+   color: #ffffff;
    text-decoration: none; 
 }
 
@@ -214,10 +225,15 @@ width: 100%;
    .header__nav {
       display: block;
       position: static;
+      inset: auto;
       height: auto;
       width: auto;
       justify-content: space-between;
       background-color: initial;
+      transform: none;
+      opacity: 1;
+      pointer-events: auto;
+      transition: none;
    }
    
    .header__nav-list { 
@@ -226,6 +242,13 @@ width: 100%;
       width: auto;
       gap: 30px;
       margin-right: 40px;
+      align-items: center;
+   }
+
+   .header__nav-item a {
+      padding: 6px 0;
+      font-size: 14px;
+      color: #0D0D0D;
    }
 
 
@@ -865,7 +888,7 @@ section {
 }
 
 .btn__ver:hover {
-   background-color: #D95F26a3;
+   background-color: #f27c38a3;
    border-radius: none;
 }
 
@@ -938,13 +961,13 @@ a {
 
 /*--------BotÃ³n ola-------*/
 .btn-1 {
-   border: 1px solid #D95F26;
+   border: 1px solid #F27C38;
    overflow: hidden;
 }
 
 .btn-1::before {
    content: '';
-   background-color: #D95F26;
+   background-color: #F27C38;
    display: block;
    height: 200%;
    width: 140%;
@@ -1172,5 +1195,4 @@ html.js footer.is-visible {
 /* FIN SLIDER*/
 
 }
-
 

@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     pageLoader.classList.add('is-hidden');
     document.body.classList.remove('loading-screen');
-  }, 3000);
+  }, 1000);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -57,6 +57,34 @@ document.addEventListener('DOMContentLoaded', () => {
   footers.forEach((footer) => observer.observe(footer));
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const estudiosSection = document.querySelector('.estudios');
+  if (!estudiosSection) return;
+
+  const estudiosBtn = estudiosSection.querySelector('.estudios__es .btn.btn-1');
+  const experienciaBtn = estudiosSection.querySelector('.experiencia .btn.btn-1');
+  const container1 = estudiosSection.querySelector('.container_1');
+  const container2 = estudiosSection.querySelector('.container_2');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      setTimeout(() => {
+        if (estudiosBtn && container1 && getComputedStyle(container1).visibility === 'hidden') {
+          estudiosBtn.click();
+        }
+        if (experienciaBtn && container2 && getComputedStyle(container2).visibility === 'hidden') {
+          experienciaBtn.click();
+        }
+      }, 1000);
+
+      obs.disconnect();
+    });
+  }, { threshold: 0.35 });
+
+  observer.observe(estudiosSection);
+});
 
 /* ===== SLIDER NUEVO ===== */
 
@@ -66,7 +94,7 @@ const slides = document.querySelectorAll('.hero-slide');
 const slider = document.getElementById('slider');
 const dotsContainer = document.querySelector('.dots');
 
-if (!slider) return; // Evita errores si el slider no existe en la pÃ¡gina actual
+if (!slider) return; // Evita errores si el slider no existe en la pagina actual
 
 let index = 0;
 let interval;
@@ -104,7 +132,7 @@ function prev() {
   goTo((index - 1 + slides.length) % slides.length);
 }
 
-// Flechas (ðŸ”¥ FIX CLAVE)
+// Flechas
 document.querySelector('.next').addEventListener('click', (e) => {
   e.stopPropagation();
   next();
@@ -139,5 +167,3 @@ startAuto();
 });
 
 /* ===== SLIDER NUEVO FIN ===== */
-
-
