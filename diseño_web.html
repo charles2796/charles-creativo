@@ -1,96 +1,117 @@
-﻿<!DOCTYPE html>
-<html lang="es">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Charles</title>
-   <link rel="icon" type="image/png" href="Asset 1icon.png">
-   <link rel="stylesheet" href="styles.css">
-   <link rel="stylesheet" href="JavaScript.js">
-   <script src="script.js"></script>
+﻿﻿﻿﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Charles Corredor — Diseño Web</title>
+    <link rel="icon" type="image/png" href="Asset%201icon.png" />
+  </head>
 
-</head>
-
-<body>
-   <!-- menú de pag -->
-   <header class="header">
-      <input type="checkbox" class="header__checkbox"  id="open-menu">
-      <label for="open-menu" class="header__open-nav-button" role="button">=
-      </label>
-      <div class="header__logo-container">
-         <img class="header__logo" src="log icon.png">
-      </div>
-
-      <nav class="header__nav">
-         <ul class="header__nav-list">
-            <li class="header__nav-item"> <a href="index.html">Inicio</a></li>
-            <li class="header__nav-item"> <a href="estudios.html">Estudios</a></li>
-            <li class="header__nav-item"><a href="portafolio.html">Portafolio</a></li>
-            <li class="header__nav-item"> <a href="diseño_web.html">Diseño web</a></li>
-            <li class="header__nav-item"> <a href="contacto.html">Contacto</a></li>
-         </ul>
-      </nav>
-
-   </header>
-
-
-   
-
-<section class="contenido_adicional">
-
-   <div class="contenido_1">
-   <h4>En los siguientes enlaces, encontrará ejemplos de diseño de botones, front end, tarjetas y demás</h4>
-   
-      <a href="https://charles2796.github.io/botones/" target="_blank">
-         <button class="btn__ver"><img src="" class="ver_mas"><h5>Botones</h5></button>
+  <body>
+    <!-- ── NAV ──────────────────────────────────────── -->
+    <nav>
+      <a href="index.html" class="nav-brand" style="text-decoration: none">
+        <div class="nav-logo-img">
+          <img src="log%20icon.png" alt="Charles logo" />
+        </div>
+        <span class="nav-wordmark">Charles</span>
       </a>
-         <a href="https://charles2796.github.io/tarjeta-180/" target="_blank">
-            <button class="btn__ver"><img src="" class="ver_mas"><h5>Tarjeta 180°</h5></button>
-         </a>
-      
-         <a href="https://charles2796.github.io/Juego/" target="_blank">
-            <button class="btn__ver"><img src="" class="ver_mas"><h5>Juego</h5></button>
-         </a>
-         <a href="https://charles2796.github.io/front-end/" target="_blank">
-            <button class="btn__ver"><img src="" class="ver_mas"><h5>Front end</h5></button>
-         </a>
-         <a href="https://charles2796.github.io/noticias/" target="_blank">
-            <button class="btn__ver"><img src="" class="ver_mas"><h5>Front end (noticias)</h5></button>
-         </a>
-         <a href="https://charles2796.github.io/chat/" target="_blank">
-            <button class="btn__ver"><img src="" class="ver_mas"><h5>Ejemplo de chat</h5></button>
-         </a>
-         </div>
-         <a href="https://charles2796.github.io/preguntas/" target="_blank">
-            <button class="btn__ver"><img src="" class="ver_mas"><h5>Ejemplo de preguntas</h5></button>
-         </a>
-         </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#sobre-mi">Sobre Mí</a></li>
+        <li><a href="estudios.html">Estudios</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="diseño_web.html">Diseño Web</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open navigation">=</button>
+    </nav>
+
+    <!-- ── WEB DESIGN EXAMPLES ──────────────────────── -->
+    <section class="section" style="padding-top: 120px">
+      <div class="section-label reveal">Ejemplos</div>
+      <h2 class="section-title reveal">DISEÑO WEB</h2>
+      <p
+        class="reveal"
+        style="
+          color: var(--gray);
+          margin-bottom: 48px;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        "
+      >
+        En los siguientes enlaces, encontrará ejemplos de diseño de botones,
+        front end, tarjetas y demás.
+      </p>
+      <div class="web-design-grid reveal">
+        <a
+          href="https://charles2796.github.io/LM_URBANO/"
+          target="_blank"
+          class="port-link-btn"
+          >LM URBANO (EN PROCESO)</a
+        >
+        <a
+          href="https://charles2796.github.io/Genki/"
+          target="_blank"
+          class="port-link-btn"
+          >GENKI UNAL (Boceto)</a
+        >
+
+        <a
+          href="https://charles2796.github.io/botones/"
+          target="_blank"
+          class="port-link-btn"
+          >Botones</a
+        >
+        <a
+          href="https://charles2796.github.io/tarjeta-180/"
+          target="_blank"
+          class="port-link-btn"
+          >Tarjeta 180°</a
+        >
+        <a
+          href="https://charles2796.github.io/Juego/"
+          target="_blank"
+          class="port-link-btn"
+          >Juego</a
+        >
+        <a
+          href="https://charles2796.github.io/front-end/"
+          target="_blank"
+          class="port-link-btn"
+          >Front end</a
+        >
+        <a
+          href="https://charles2796.github.io/noticias/"
+          target="_blank"
+          class="port-link-btn"
+          >Front end (noticias)</a
+        >
+        <a
+          href="https://charles2796.github.io/chat/"
+          target="_blank"
+          class="port-link-btn"
+          >Ejemplo de chat</a
+        >
+        <a
+          href="https://charles2796.github.io/preguntas/"
+          target="_blank"
+          class="port-link-btn"
+          >Ejemplo de preguntas</a
+        >
       </div>
-</section>
+    </section>
 
-      
-   <footer>
-  <div class="footer-container">
-    <div class="footer-section">
-      <h3>Menú</h3>
-      <a href="index.html">Inicio</a>
-      <a href="estudios.html">Estudios</a>
-      <a href="portafolio.html">Portafolio</a>
-      <a href="diseño_web.html">Diseño web</a>
-      <a href="contacto.html">Contacto</a>
-    </div>
-    <div class="footer-section">
-      <h3>Contacto</h3>
-      <a href="https://www.linkedin.com/in/charles-co27/" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/charlescreativo/" target="_blank">Instagram</a>
-      <a href="https://wa.me/qr/DD64USS7RJG4G1" target="_blank">WhatsApp</a>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <p>© 2024 Charles Creativo. Todos los derechos reservados.</p>
-  </div>
-</footer>
-</body>
+    <!-- ── FOOTER ────────────────────────────────────── -->
+    <footer>
+      <div class="footer-brand">Charles</div>
+      <div class="footer-tag">¡Transformando ideas!</div>
+      <div class="footer-copy">© 2026 Jhann Charles Corredor Jaimes</div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
 </html>
-
-

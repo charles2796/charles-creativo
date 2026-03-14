@@ -1,86 +1,72 @@
-﻿<!DOCTYPE html>
+﻿﻿<!doctype html>
 <html lang="es">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Charles</title>
-   <link rel="icon" type="image/png" href="Asset 1icon.png">
-   <link rel="stylesheet" href="styles.css">
-   <script src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charles Corredor — Contacto</title>
+    <link rel="icon" type="image/png" href="Asset%201icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-</head>
+  <body>
+    <!-- ── NAV ──────────────────────────────────────── -->
+    <nav>
+      <a href="index.html" class="nav-brand" style="text-decoration: none">
+        <div class="nav-logo-img">
+          <img src="log%20icon.png" alt="Charles logo" />
+        </div>
+        <span class="nav-wordmark">Charles</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#sobre-mi">Sobre Mí</a></li>
+        <li><a href="estudios.html">Estudios</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="diseño_web.html">Diseño Web</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open navigation">=</button>
+    </nav>
 
-
-<body>
-
-   <!-- menú de pag -->
-   <header class="header">
-      <input type="checkbox" class="header__checkbox"  id="open-menu">
-      <label for="open-menu" class="header__open-nav-button" role="button">=
-      </label>
-      <div class="header__logo-container">
-         <img class="header__logo" src="log icon.png">
+    <!-- ── CONTACTO ──────────────────────────────────── -->
+    <section
+      class="contact-section"
+      id="contacto"
+      style="min-height: 100vh; align-content: center"
+    >
+      <div>
+        <h2 class="contact-title">¿TIENES<br />UN PROYECTO?</h2>
+        <p class="contact-sub">Hablemos y transformemos tu idea juntos.</p>
       </div>
+      <div class="contact-links">
+        <a href="mailto:charlescreativo@gmail.com" class="contact-link">
+          <span class="contact-icon">✉</span> charlescreativo@gmail.com
+        </a>
+        <a
+          href="https://wa.me/573174510489"
+          target="_blank"
+          class="contact-link"
+        >
+          <span class="contact-icon">💬</span> WhatsApp: 317 451 0489
+        </a>
+        <a
+          href="https://www.linkedin.com/in/charles-co27/"
+          target="_blank"
+          class="contact-link"
+        >
+          <span class="contact-icon">in</span> LinkedIn — charles-co27
+        </a>
+        <a
+          href="https://www.instagram.com/charlescreativo/"
+          target="_blank"
+          class="contact-link"
+        >
+          <span class="contact-icon">ig</span> @charlescreativo
+        </a>
+      </div>
+    </section>
 
-      <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item"> <a href="index.html">Inicio</a></li>
-            <li class="header__nav-item"> <a href="estudios.html">Estudios</a></li>
-            <li class="header__nav-item"><a href="portafolio.html">Portafolio</a></li>
-            <li class="header__nav-item"> <a href="diseño_web.html">Diseño web</a></li>
-            <li class="header__nav-item"> <a href="contacto.html">Contacto</a></li>
-         </ul>
-      </nav>
-
-   </header>
-<section>
-   <!-- contacto -->
-   <div class="form" id="contacto">
-
-      <div class="form__input-container">
-         <a href="https://www.linkedin.com/in/charles-co27/" target="_blank">
-            <button class="btn__con"><img src="contecto imagenes-02.png" class="imagenes_botones"></button>
-         </a>
-         <a href="https://www.instagram.com/charlescreativo/" target="_blank">
-            <button class="btn__con"><img src="contecto imagenes-01.png" class="imagenes_botones"></button>
-         </a>
-         <a href="https://wa.me/qr/DD64USS7RJG4G1" target="_blank">
-            <button class="btn__con"><img src="contecto imagenes-03.png" class="imagenes_botones"></button>
-         </a>
-      </div>     
-   
-
-<!-- LETRERO PUBLICIDAD  -->
-
-      <div class="box__publicidad">
-
-      <p>👉 Haz clic en los íconos para visitarme en redes</p>
-   </div>
-   </div>
-</section>
-
-   <footer>
-  <div class="footer-container">
-    <div class="footer-section">
-      <h3>Menú</h3>
-      <a href="index.html">Inicio</a>
-      <a href="estudios.html">Estudios</a>
-      <a href="portafolio.html">Portafolio</a>
-      <a href="diseño_web.html">Diseño web</a>
-      <a href="contacto.html">Contacto</a>
-    </div>
-    <div class="footer-section">
-      <h3>Contacto</h3>
-      <a href="https://www.linkedin.com/in/charles-co27/" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/charlescreativo/" target="_blank">Instagram</a>
-      <a href="https://wa.me/qr/DD64USS7RJG4G1" target="_blank">WhatsApp</a>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <p>© 2024 Charles Creativo. Todos los derechos reservados.</p>
-  </div>
-</footer>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
-
-

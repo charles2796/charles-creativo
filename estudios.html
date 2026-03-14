@@ -1,110 +1,202 @@
-﻿<!DOCTYPE html>
+﻿﻿﻿﻿<!doctype html>
 <html lang="es">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Charles</title>
-   <link rel="icon" type="image/png" href="Asset 1icon.png">
-   <link rel="stylesheet" href="styles.css">
-   <link rel="stylesheet" href="JavaScript.js">
-   <script src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charles Corredor — Estudios & Experiencia</title>
+    <link rel="icon" type="image/png" href="Asset%201icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-</head>
+  <body>
+    <!-- ── NAV ──────────────────────────────────────── -->
+    <nav>
+      <a href="index.html" class="nav-brand" style="text-decoration: none">
+        <div class="nav-logo-img">
+          <img src="log%20icon.png" alt="Charles logo" />
+        </div>
+        <span class="nav-wordmark">Charles</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#sobre-mi">Sobre Mí</a></li>
+        <li><a href="estudios.html">Estudios</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="diseño_web.html">Diseño Web</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open navigation">=</button>
+    </nav>
 
-<body>
-
-   <!-- menú de pag -->
-   <header class="header">
-      <input type="checkbox" class="header__checkbox"  id="open-menu">
-      <label for="open-menu" class="header__open-nav-button" role="button">=
-      </label>
-      <div class="header__logo-container">
-         <img class="header__logo" src="log icon.png">
+    <!-- ── EDUCACIÓN ─────────────────────────────────── -->
+    <section
+      class="section education"
+      id="educacion"
+      style="padding-top: 120px"
+    >
+      <div class="section-label reveal">Formación</div>
+      <h2 class="section-title reveal">EDUCACIÓN</h2>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-type">Pregrado</div>
+          <div class="edu-year">2025</div>
+          <div class="edu-inst">UNIVERSIDAD NACIONAL DE COLOMBIA</div>
+          <div class="edu-degree">Trabajo Social — Sede Bogotá</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-type">Tecnología</div>
+          <div class="edu-year">2018</div>
+          <div class="edu-inst">CORPORACIÓN UNIVERSITARIA MINUTO DE DIOS</div>
+          <div class="edu-degree">Tecnología en comunicación gráfica</div>
+        </div>
       </div>
 
-      <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item"> <a href="index.html">Inicio</a></li>
-            <li class="header__nav-item"> <a href="estudios.html">Estudios</a></li>
-            <li class="header__nav-item"><a href="portafolio.html">Portafolio</a></li>
-            <li class="header__nav-item"> <a href="diseño_web.html">Diseño web</a></li>
-            <li class="header__nav-item"> <a href="contacto.html">Contacto</a></li>
-         </ul>
-      </nav>
+      <div class="cert-list">
+        <div class="cert-item reveal">
+          <div class="cert-dot"></div>
+          <div class="cert-info">
+            <div class="cert-name">Fundamentos de IA de Google</div>
+            <div class="cert-source">Coursera (Google)</div>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <div class="cert-dot"></div>
+          <div class="cert-info">
+            <div class="cert-name">
+              Fundamentos del diseño de experiencias de usuario (UX)
+            </div>
+            <div class="cert-source">Coursera (Google)</div>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <div class="cert-dot"></div>
+          <div class="cert-info">
+            <div class="cert-name">
+              Comenzar el proceso de diseño UX: Empatizar, definir e idear
+            </div>
+            <div class="cert-source">Coursera (Google)</div>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <div class="cert-dot"></div>
+          <div class="cert-info">
+            <div class="cert-name">
+              Construir esquemas de páginas y prototipos de baja fidelidad
+            </div>
+            <div class="cert-source">Coursera (Google)</div>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <div class="cert-dot"></div>
+          <div class="cert-info">
+            <div class="cert-name">
+              Investigación de la experiencia del usuario y prueba de los
+              primeros conceptos
+            </div>
+            <div class="cert-source">Coursera (Google)</div>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <div class="cert-dot"></div>
+          <div class="cert-info">
+            <div class="cert-name">Programación Básica</div>
+            <div class="cert-source">Talento TECH Oriente</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-   </header>
+    <!-- ── EXPERIENCIA ───────────────────────────────── -->
+    <section class="section experience" id="experiencia">
+      <div class="section-label reveal">Trayectoria</div>
+      <h2 class="section-title reveal">EXPERIENCIA</h2>
+      <div class="exp-list">
+        <div class="exp-item reveal">
+          <div class="exp-period">06/2021 — 03/2022</div>
+          <div>
+            <div class="exp-company">
+              Observatorio de Frontera, Territorio y Paz (OFTP)
+            </div>
+            <div class="exp-role">Diseñador gráfico</div>
+            <div class="exp-tasks">
+              <div class="exp-task">
+                Creador de identidad corporativa (Manual corporativo).
+              </div>
+              <div class="exp-task">
+                Diseño de piezas gráficas (Banners, diagramación de artículos,
+                portadas, flyers).
+              </div>
+              <div class="exp-task">
+                Creación de sección de datos curiosos, gestor de contenido web,
+                producción audiovisual.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-item reveal">
+          <div class="exp-period">10/2020 — 12/2021</div>
+          <div>
+            <div class="exp-company">Cervecería El Chato</div>
+            <div class="exp-role">Diseñador gráfico</div>
+            <div class="exp-tasks">
+              <div class="exp-task">
+                Creador de identidad corporativa (Manual corporativo), diseño de
+                piezas gráficas (Banners, tarjetas, flyers).
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-item reveal">
+          <div class="exp-period">10/2021 — 03/2022</div>
+          <div>
+            <div class="exp-company">Ríos Bar</div>
+            <div class="exp-role">Diseñador gráfico</div>
+            <div class="exp-tasks">
+              <div class="exp-task">
+                Creador de identidad corporativa (Manual corporativo), diseño de
+                piezas gráficas (Banners, tarjetas, flyers).
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-item reveal">
+          <div class="exp-period">12/2022 — 02/2023</div>
+          <div>
+            <div class="exp-company">
+              Revista del Departamento de Trabajo Social UNAL
+            </div>
+            <div class="exp-role">Diseñador gráfico</div>
+            <div class="exp-tasks">
+              <div class="exp-task">
+                Diseño de piezas gráficas (Banners, diagramación de artículos,
+                portadas), gestor de contenido web.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-item reveal">
+          <div class="exp-period">—</div>
+          <div>
+            <div class="exp-company">GENKI</div>
+            <div class="exp-role">Diseñador gráfico, programador web & UX</div>
+            <div class="exp-tasks">
+              <div class="exp-task">
+                Diseño de piezas gráficas, creador de contenido web y de sitio
+                web.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Estudios sección -->
-   <section class="estudios" id="estudios">
-      
-      <div class="estudios__es">
-         <button class="btn btn-1" onclick="ShowHide()">
-      <h2 class="form__title">Estudios</h2></button>
-      <div class="container_1">
-         
-      <h3> CORPORACIÓN UNIVERSITARIA MINUTO DE DIOS </h3>
-      <h4> Tecnología en comunicación gráfica</h4>
-      <h3> COURSERA (Google) </h3>
-      <h4>Fundamentos de IA  de Google</h4>
-      <h4>Fundamentos del diseño de experiencias de usuario (UX)</h4>
-      <h4>Comenzar el proceso de diseño UX: Empatizar, definir e idear</h4>
-      <h4>Construir esquemas de páginas y prototipos de baja fidelidad</h4>
-      <h4>Investigación de la experiencia del usuario y prueba de los primeros conceptos</h4>
-      <h3>Talento TECH Oriente</h3>
-      <h4>Programación Básica</h4>
-   </div>
-   </div>
-
-   <div class="experiencia">
-      <button class="btn btn-1" onclick="ShowHide_2()">
-      <h2 class="form__title"> Experiencia </h2></button>
-      <div class="container_2">
-<h3>Observatorio de Frontera, Territorio y Paz (OFTP) (01/06/2021 - 01/03/2022)</h3>
-Diseñador gráfico
-Tareas realizadas: Creador de identidad corporativa (Manual corporativo), diseño de piezas gráficas (Banners, diagramación de artículos, portadas de artículos y revistas, flyers), creación de sección de datos curiosos, gestor de contenido web, producción audiovisual (fotografías, videos).
-
-<h3>Cervecería El Chato (06/10/2020 - 07/08/2021, 08/10/2021 - 10/12/2021)</h3>
-Diseñador gráfico
-Tareas realizadas: Creador de identidad corporativa (Manual corporativo), diseño de piezas gráficas (Banners, diseño de tarjetas de presentación, flyers).
-
-<h3>Ríos Bar (26/10/2021 - 16/03/2022)</h3>
-Diseñador gráfico
-Tareas realizadas: Creador de identidad corporativa (Manual corporativo), diseño de piezas gráficas (Banners, diseño de tarjetas de presentación, flyers).
-
-<h3>Revista del Departamento de Trabajo Social UNAL (Universidad Nacional) (05/12/2022 - 05/02/2023)</h3>
-Diseñador gráfico
-Tareas realizadas: Diseño de piezas gráficas (Banners, diagramación de artículos, portadas de revistas, flyers), creación de sección de datos curiosos, gestor de contenido web.
-<h3>GENKI</h3>
-Diseñador gráfico, programador web & UX
-Tareas realizadas: Diseño de piezas gráficas (Banners, diagramación de artículos, portadas de revistas, flyers), creador de contenido web y de sitio web. 
-</h4>
-</div>
-   </div>
-   </section>
-
-      
-<footer>
-  <div class="footer-container">
-    <div class="footer-section">
-      <h3>Menú</h3>
-      <a href="index.html">Inicio</a>
-      <a href="estudios.html">Estudios</a>
-      <a href="portafolio.html">Portafolio</a>
-      <a href="diseño_web.html">Diseño web</a>
-      <a href="contacto.html">Contacto</a>
-    </div>
-    <div class="footer-section">
-      <h3>Contacto</h3>
-      <a href="https://www.linkedin.com/in/charles-co27/" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/charlescreativo/" target="_blank">Instagram</a>
-      <a href="https://wa.me/qr/DD64USS7RJG4G1" target="_blank">WhatsApp</a>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <p>© 2024 Charles Creativo. Todos los derechos reservados.</p>
-  </div>
-</footer>
-</body>
+    <!-- ── FOOTER ────────────────────────────────────── -->
+    <footer>
+      <div class="footer-brand">Charles</div>
+      <div class="footer-tag">¡Transformando ideas!</div>
+      <div class="footer-copy">© 2026 Jhann Charles Corredor Jaimes</div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
 </html>
-
-
