@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charles Corredor — Edición Editorial</title>
+    <link rel="icon" type="image/png" href="Asset%201icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      /* Estilo específico para visualizar PDFs de forma elegante */
+      .port-item iframe {
+        background: #1a1a1a;
+      }
+      .port-info-editorial {
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- ── NAV ──────────────────────────────────────── -->
+    <nav>
+      <a href="./index.html" class="nav-brand" style="text-decoration: none">
+        <div class="nav-logo-img">
+          <img src="./log%20icon.png" alt="Charles logo" />
+        </div>
+        <span class="nav-wordmark">Charles</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="./index.html#inicio">Inicio</a></li>
+        <li><a href="./index.html#servicios">Servicios</a></li>
+        <li><a href="./portafolio.html" class="active">Portafolio</a></li>
+        <li><a href="./contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open navigation">=</button>
+    </nav>
+
+    <section class="section" style="padding-top: 160px">
+      <div class="section-label reveal">Portafolio</div>
+      <h2 class="section-title reveal">
+        EDICIÓN<br /><span class="accent">EDITORIAL</span>
+      </h2>
+
+      <div class="port-grid reveal">
+        <!-- PDF ITEM 1 -->
+        <!-- Reemplaza FILE_ID con el ID real de tu PDF en Drive -->
+        <div class="port-item">
+          <iframe
+            src="https://drive.google.com/file/d/10RWOQ4R1cYJdUl2LZPWVv-EJbN-a3tqT/preview"
+            allow="autoplay"
+          >
+          </iframe>
+          <div class="port-overlay">
+            <div class="port-info">
+              <div class="port-cat">PDF Editorial</div>
+              <div class="port-title">Proyecto Editorial 01</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PDF ITEM 2 -->
+        <div class="port-item">
+          <iframe
+            src="https://drive.google.com/file/d/13fFzYk5Gs_EmFIYy3eq0KPoN8d5Uc04X/preview"
+            allow="autoplay"
+          >
+          </iframe>
+          <div class="port-overlay">
+            <div class="port-info">
+              <div class="port-cat">PDF Editorial</div>
+              <div class="port-title">Proyecto Editorial 02</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PDF ITEM 3 -->
+        <div class="port-item">
+          <iframe
+            src="https://drive.google.com/file/d/1S6hBgcQviYLDzaY4LKeCtLe3bJK_FTMv/preview"
+            allow="autoplay"
+          >
+          </iframe>
+          <div class="port-overlay">
+            <div class="port-info">
+              <div class="port-cat">PDF Editorial</div>
+              <div class="port-title">Proyecto Editorial 03</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 60px; text-align: center">
+        <a href="./index.html#portafolio" class="btn-ghost"
+          >← Volver al portafolio</a
+        >
+      </div>
+    </section>
+
+    <!-- ── CONTACTO ──────────────────────────────────── -->
+    <section class="contact-section" id="contacto">
+      <div>
+        <h2 class="contact-title">¿TIENES UN PROYECTO?</h2>
+        <p class="contact-sub">Hablemos y transformemos tu idea juntos.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:charlescreativo@gmail.com" class="contact-link">
+          <span class="contact-icon">✉</span> charlescreativo@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-brand">Charles</div>
+      <div class="footer-copy">© 2026 Jhann Charles Corredor Jaimes</div>
+    </footer>
+
+    <script src="./main.js" defer></script>
+  </body>
+</html>
