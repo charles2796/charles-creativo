@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
   --bg:       #0C0C0C;
@@ -603,7 +603,7 @@ footer {
   margin-bottom: 24px;
 }
 .hero-slide .content img {
-  max-width: 1080px;
+  max-width: 100%; /* Ajustado para hacerlo responsivo por defecto */
   max-height: calc(100vh - 220px);
   width: auto;
   height: auto;
@@ -699,10 +699,17 @@ footer {
 
   /* Slider Responsive */
   .hero-slider .content { padding: 40px 24px; }
-  .slide-label { font-size: 16px; }
+  .slide-label { font-size: 16px; margin-bottom: 16px; text-align: center; } /* Añadido ajuste de texto */
   .hero-slider .nav { width: 40px; height: 40px; font-size: 20px; }
   .hero-slider .prev { left: 12px; }
   .hero-slider .next { right: 12px; }
+  
+  /* NUEVO: Ajuste específico de la imagen para móviles */
+  .hero-slide .content img {
+    max-width: 100%;
+    max-height: 60vh;
+    width: 100%;
+  }
 }
 
 @media(max-width: 480px) {
