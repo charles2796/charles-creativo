@@ -29,12 +29,24 @@ filterBtns.forEach(btn => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const f = btn.dataset.filter;
+    
+    const categoryCounts = {};
     portItems.forEach(item => {
-      const show = f === 'all' || item.dataset.cat === f;
-      item.style.display = show ? '' : 'none';
+      if (f === 'all') {
+        const cat = item.dataset.cat;
+        if (!categoryCounts[cat]) categoryCounts[cat] = 0;
+        
+        item.style.display = (categoryCounts[cat] < 3) ? '' : 'none';
+        if (item.style.display === '') categoryCounts[cat]++;
+      } else {
+        const show = item.dataset.cat === f;
+        item.style.display = show ? '' : 'none';
+      }
     });
   });
 });
+
+document.querySelector('.filter-btn.active')?.click();
 
 // Nav scroll style
 const nav = document.querySelector('nav');
