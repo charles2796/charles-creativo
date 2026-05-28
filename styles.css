@@ -603,7 +603,7 @@ footer {
   margin-bottom: 24px;
 }
 .hero-slide .content img {
-  max-width: 100%; /* Ajustado para hacerlo responsivo por defecto */
+  max-width: 100%;
   max-height: calc(100vh - 220px);
   width: auto;
   height: auto;
@@ -699,12 +699,10 @@ footer {
 
   /* Slider Responsive */
   .hero-slider .content { padding: 40px 24px; }
-  .slide-label { font-size: 16px; margin-bottom: 16px; text-align: center; } /* Añadido ajuste de texto */
+  .slide-label { font-size: 16px; }
   .hero-slider .nav { width: 40px; height: 40px; font-size: 20px; }
   .hero-slider .prev { left: 12px; }
   .hero-slider .next { right: 12px; }
-  
-  /* NUEVO: Ajuste específico de la imagen para móviles */
   .hero-slide .content img {
     max-width: 100%;
     max-height: 60vh;
