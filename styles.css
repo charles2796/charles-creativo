@@ -1,4 +1,4 @@
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+﻿﻿﻿﻿﻿﻿﻿﻿*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
   --bg:       #0C0C0C;
@@ -698,15 +698,17 @@ footer {
   }
 
   /* Slider Responsive */
-  .hero-slider .content { padding: 40px 24px; }
+  .hero-slider .content { padding: 100px 24px 40px; justify-content: center; }
   .slide-label { font-size: 16px; }
   .hero-slider .nav { width: 40px; height: 40px; font-size: 20px; }
   .hero-slider .prev { left: 12px; }
   .hero-slider .next { right: 12px; }
   .hero-slide .content img {
     max-width: 100%;
-    max-height: 60vh;
-    width: 100%;
+    max-height: 65vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
   }
 }
 
