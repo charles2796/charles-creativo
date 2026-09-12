@@ -1,9 +1,13 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Charles — Branding</title>
+    <title>Charles Corredor — Branding</title>
+    <meta
+      name="description"
+      content="Manuales de marca e identidad corporativa diseñados por Charles Corredor: EDDS Anave, LM Urbano y Velora."
+    />
     <link rel="icon" type="image/png" href="Asset%201icon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -25,16 +29,11 @@
         <li><a href="./diseño_web.html">Diseño Web</a></li>
         <li><a href="./contacto.html" class="nav-cta">Contacto</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Open navigation">=</button>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">=</button>
     </nav>
 
     <section class="hero-slider" id="slider">
-      <div
-        class="hero-slide active"
-        style="
-          background-image: url(&quot;./IMG%20BRAND/branding_bg1.jpg&quot;);
-        "
-      >
+      <div class="hero-slide active">
         <div class="content">
           <p class="slide-label">Manual de Marca - EDDS ANAVE</p>
           <img
@@ -43,26 +42,16 @@
           />
         </div>
       </div>
-      <div
-        class="hero-slide"
-        style="
-          background-image: url(&quot;./IMG%20BRAND/branding_bg3.jpg&quot;);
-        "
-      >
+      <div class="hero-slide">
         <div class="content">
           <p class="slide-label">Manual de Marca - LM URBANO</p>
-          <img src="IMG/LM URBANO-08.png" alt="Manual de Identidad LM URBANO" />
+          <img src="IMG/LM URBANO-08.png" alt="Manual de Identidad LM URBANO" loading="lazy" />
         </div>
       </div>
-      <div
-        class="hero-slide"
-        style="
-          background-image: url(&quot;./IMG%20BRAND/branding_bg2.jpg&quot;);
-        "
-      >
+      <div class="hero-slide">
         <div class="content">
           <p class="slide-label">Manual de Marca - VELORA</p>
-          <img src="IMG/BRIEF-VELORA.png" alt="Manual de Identidad VELORA" />
+          <img src="IMG/BRIEF-VELORA.png" alt="Manual de Identidad VELORA" loading="lazy" />
         </div>
       </div>
 
@@ -77,6 +66,6 @@
       <div class="footer-copy">© 2026 Jhann Charles Corredor Jaimes</div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>

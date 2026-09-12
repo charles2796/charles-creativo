@@ -1,16 +1,19 @@
-﻿﻿<html lang="es">
+﻿<!doctype html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Charles</title>
-
+    <title>Charles Corredor — Publicidad</title>
+    <meta
+      name="description"
+      content="Piezas gráficas publicitarias diseñadas por Charles Corredor para marcas como Rios Bar, El Chato y Punto Feliz."
+    />
     <link rel="icon" type="image/png" href="Asset%201icon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-    <canvas id="bgCanvas"></canvas>Añade un borde fino alrededor del menú móvil
-    para resaltarlo del fondo
+    <canvas id="bgCanvas"></canvas>
 
     <!-- ── NAV ──────────────────────────────────────── -->
     <nav>
@@ -29,17 +32,12 @@
         <li><a href="./diseño_web.html">Diseño Web</a></li>
         <li><a href="./contacto.html" class="nav-cta">Contacto</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Open navigation">=</button>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">=</button>
     </nav>
 
     <!-- ===== SLIDER PREMIUM ===== -->
     <section class="hero-slider" id="slider">
-      
-
-
-
-
-<div
+      <div
         class="hero-slide active"
         style="
           background-image: url(&quot;./IMG%20PUB/cerveza%20corona.png&quot;);
@@ -121,6 +119,6 @@
     </footer>
 
     <!-- JS SIEMPRE AL FINAL -->
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>
