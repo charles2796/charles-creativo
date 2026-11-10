@@ -209,9 +209,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const label = slide.querySelector('.slide-label');
       const title = label ? label.textContent.replace(/\s+/g, ' ').trim() : 'Trabajo ' + (i + 1);
 
+      const asGrid = thumbsContainer.dataset.style === 'grid';
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = 'slider-thumb' + (i === 0 ? ' active' : '');
+      btn.className = (asGrid ? 'port-item slider-thumb-card' : 'slider-thumb') + (i === 0 ? ' active' : '');
       btn.setAttribute('aria-label', 'Ver ' + title);
 
       const img = document.createElement('img');
@@ -219,11 +220,21 @@ document.addEventListener('DOMContentLoaded', () => {
       img.alt = title;
       img.loading = 'lazy';
 
-      const cap = document.createElement('span');
-      cap.className = 'slider-thumb-caption';
-      cap.textContent = title;
-
-      btn.append(img, cap);
+      if (asGrid) {
+        // Misma estructura que las tarjetas del portafolio del index
+        btn.innerHTML =
+          '<div class="port-overlay"><div class="port-info">' +
+          '<div class="port-cat"></div><div class="port-title"></div>' +
+          '</div></div>';
+        btn.querySelector('.port-cat').textContent = thumbsContainer.dataset.catLabel || '';
+        btn.querySelector('.port-title').textContent = title;
+        btn.prepend(img);
+      } else {
+        const cap = document.createElement('span');
+        cap.className = 'slider-thumb-caption';
+        cap.textContent = title;
+        btn.append(img, cap);
+      }
       btn.addEventListener('click', () => {
         goTo(i);
         slider.scrollIntoView({ behavior: 'smooth', block: 'center' });

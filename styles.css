@@ -859,7 +859,59 @@ body.font-large {
 .slider-thumb:focus-visible img { opacity:1; border-color:var(--orange); }
 .slider-thumb.active img { opacity:1; border-color:var(--orange); }
 .slider-thumb.active .slider-thumb-caption { color:var(--white); }
+/* Variante tipo index (data-style="grid"): tarjetas .port-item como botones */
+.slider-thumb-card {
+  display:block; width:100%; padding:0; margin:0;
+  border:0; font:inherit; text-align:left; color:inherit;
+}
+.slider-thumb-card.active { outline:3px solid var(--orange); outline-offset:-3px; }
+.slider-thumb-card.active img { filter:grayscale(0%); }
+.slider-thumb-card:focus-visible .port-overlay { opacity:1; }
+/* Tarjetas de galería: mismo tamaño y tipografía que las del index */
+.slider-thumbs.port-grid { grid-template-columns:repeat(3, 1fr); gap:3px; }
+@media(max-width:960px){ .slider-thumbs.port-grid { grid-template-columns:repeat(2, 1fr); gap:15px; } }
 @media (max-width: 480px) {
   .slider-thumbs { grid-template-columns:repeat(3, 1fr); gap:12px; }
+  .slider-thumbs.port-grid { grid-template-columns:1fr; gap:20px; }
   .slider-thumb-caption { display:none; }
+}
+
+/* ── RESPONSIVO MÓVIL: tarjetas, slider y secciones ───────── */
+
+/* En pantallas táctiles no existe el "hover": mostrar siempre
+   la categoría y el título de las tarjetas (index y galerías) */
+@media (hover: none) {
+  .port-item .port-overlay { opacity:1; }
+  .port-item img { filter:grayscale(0%); }
+}
+
+@media (max-width: 960px) {
+  .port-overlay { padding:16px; }
+  /* Título del slider abajo, sobre el degradado, sin tapar la imagen
+     (solo en slides de fondo; Branding tiene la imagen dentro y se queda centrado) */
+  .hero-slide:not(:has(.content img)) .content {
+    justify-content:flex-end; padding:24px 64px 56px;
+  }
+  .hero-slide:not(:has(.content img)) .slide-label { margin-bottom:0; }
+}
+
+@media (max-width: 480px) {
+  /* Márgenes laterales de 16px y menos aire vertical */
+  .section { padding:56px 16px; }
+  .section-label { margin-bottom:24px; }
+  .section-title { margin-bottom:32px; }
+
+  /* Slider: menos alto (la imagen se ajusta completa con contain) */
+  .hero-slider { height:70vh; height:70svh; }
+  .hero-slide .content { padding:24px 56px 48px; }
+  .hero-slide:not(:has(.content img)) .content { padding:24px 56px 48px; }
+  .slide-label { font-size:13px; letter-spacing:.06em; line-height:1.35; }
+  .hero-slide .content img { max-height:calc(70svh - 120px); }
+  .hero-slider .nav { width:36px; height:36px; font-size:18px; }
+  .hero-slider .prev { left:8px; }
+  .hero-slider .next { right:8px; }
+  .dots { bottom:16px; gap:8px; flex-wrap:wrap; justify-content:center; max-width:calc(100% - 32px); }
+  .dot { width:8px; height:8px; }
+
+  .port-title { font-size:14px; }
 }
