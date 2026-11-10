@@ -195,12 +195,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dots = document.querySelectorAll('.dot');
 
+  // Miniaturas: si la página tiene un contenedor .slider-thumbs,
+  // se crea una miniatura por cada diapositiva del slider.
+  const thumbsContainer = document.querySelector('.slider-thumbs');
+  const thumbs = [];
+  if (thumbsContainer) {
+    slides.forEach((slide, i) => {
+      // La imagen puede venir como fondo del slide o como <img> dentro de él
+      const match = /url\(\s*["']?(.*?)["']?\s*\)/.exec(slide.style.backgroundImage || '');
+      const innerImg = slide.querySelector('.content img');
+      const src = match ? match[1] : (innerImg ? innerImg.getAttribute('src') : '');
+      if (!src) return;
+      const label = slide.querySelector('.slide-label');
+      const title = label ? label.textContent.replace(/\s+/g, ' ').trim() : 'Trabajo ' + (i + 1);
+
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'slider-thumb' + (i === 0 ? ' active' : '');
+      btn.setAttribute('aria-label', 'Ver ' + title);
+
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = title;
+      img.loading = 'lazy';
+
+      const cap = document.createElement('span');
+      cap.className = 'slider-thumb-caption';
+      cap.textContent = title;
+
+      btn.append(img, cap);
+      btn.addEventListener('click', () => {
+        goTo(i);
+        slider.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+      thumbsContainer.appendChild(btn);
+      thumbs[i] = btn;
+    });
+  }
+
   function goTo(i) {
     slides[index].classList.remove('active');
     dots[index].classList.remove('active');
+    if (thumbs[index]) thumbs[index].classList.remove('active');
     index = i;
     slides[index].classList.add('active');
     dots[index].classList.add('active');
+    if (thumbs[index]) thumbs[index].classList.add('active');
     resetAuto();
   }
 

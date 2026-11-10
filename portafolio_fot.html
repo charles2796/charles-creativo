@@ -1,4 +1,4 @@
-﻿﻿<!doctype html>
+﻿<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,9 @@
       name="description"
       content="Serie fotográfica de paisajes, naturaleza y retratos de Charles Corredor."
     />
-    <link rel="icon" type="image/png" href="Asset%201icon.png" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
@@ -113,9 +115,44 @@
         </div>
       </div>
 
+      <div
+        class="hero-slide"
+        style="background-image: url(&quot;./IMG%20FOT/DSC_4218.jpg&quot;)"
+      >
+        <div class="content">
+          <p class="slide-label">Fotografía en la UNAL</p>
+        </div>
+      </div>
+
+      <div
+        class="hero-slide"
+        style="background-image: url(&quot;./IMG%20FOT/DSC_4238.jpg&quot;)"
+      >
+        <div class="content">
+          <p class="slide-label">Araña UNAL</p>
+        </div>
+      </div>
+
+      <div
+        class="hero-slide"
+        style="background-image: url(&quot;./IMG%20FOT/cuidando-unal.jpg&quot;)"
+      >
+        <div class="content">
+          <p class="slide-label">Cuidando UNAL</p>
+        </div>
+      </div>
+
       <button class="nav prev">‹</button>
       <button class="nav next">›</button>
       <div class="dots"></div>
+    </section>
+
+    <!-- ===== MINIATURAS DE TODOS LOS TRABAJOS =====
+         Se generan solas desde las diapositivas del slider (script.js). -->
+    <section class="section thumbs-section">
+      <div class="section-label reveal">Galería</div>
+      <h2 class="section-title reveal">TODAS LAS FOTOGRAFÍAS</h2>
+      <div class="slider-thumbs"></div>
     </section>
 
     <!-- ── FOOTER ────────────────────────────────────── -->
